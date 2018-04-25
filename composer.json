@@ -1,0 +1,14 @@
+{
+    "name": "chabanenk0/javafo",
+    "description": "Javafo java library for swiss tournament pairing processing",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "scripts": {
+        "post-install-cmd": [
+            "@auto-scripts",
+            "mkdir -p vendor/javafo/javafo && cd vendor/javafo/javafo && curl http://www.rrweb.org/javafo/current/javafo.jar --output javafo.jar && cd ../../..",
+            "echo 'java -ea ../javafo/javafo/javafo.jar' > %PUBLIC_DIR%/javafo && chmod u+x %PUBLIC_DIR%/javafo"
+        ]
+    }
+}
